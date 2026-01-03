@@ -1,0 +1,977 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Вивчаємо англійську рівня A2-C1</title>
+ <meta name="description" content="Learn English with games, space visuals and interactive vocabulary.">
+<meta name="keywords" content="learn english, english vocabulary, english game, space learning">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            padding-top: 30px;
+
+            background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+       body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 300%;
+    height: 300%;
+    background-image:
+        radial-gradient(1px 1px at 10% 20%, #ffffff, transparent),
+        radial-gradient(1px 1px at 20% 80%, #cfe3ff, transparent),
+        radial-gradient(1px 1px at 30% 40%, #ffffff, transparent),
+        radial-gradient(1px 1px at 40% 60%, #bcdcff, transparent),
+        radial-gradient(1px 1px at 50% 10%, #ffffff, transparent),
+        radial-gradient(1px 1px at 60% 90%, #e0f7ff, transparent),
+        radial-gradient(1px 1px at 70% 30%, #ffffff, transparent),
+        radial-gradient(1px 1px at 80% 70%, #a7c7ff, transparent),
+        radial-gradient(1px 1px at 90% 50%, #ffffff, transparent),
+
+        radial-gradient(3px 3px at 15% 60%, #ffffff, transparent),
+        radial-gradient(3px 3px at 35% 25%, #d9ecff, transparent),
+        radial-gradient(3px 3px at 55% 75%, #ffffff, transparent),
+        radial-gradient(3px 3px at 75% 15%, #bcdcff, transparent),
+
+        radial-gradient(5px 5px at 25% 45%, #ffffff, transparent),
+        radial-gradient(6px 6px at 65% 35%, #e0f7ff, transparent);
+
+    background-repeat: repeat;
+    background-size: 400px 400px;
+    animation: starsMove 120s linear infinite;
+    opacity: 0.8;
+    z-index: -1;
+}
+body::after {
+    content: "";
+    position: fixed;
+    inset: -20%;
+    width: 140%;
+    height: 140%;
+    background:
+        radial-gradient(
+            circle at 30% 40%,
+            rgba(186, 85, 255, 0.25),
+            rgba(79, 172, 254, 0.15),
+            rgba(27, 39, 53, 0.1),
+            transparent 60%
+        ),
+        radial-gradient(
+            circle at 70% 60%,
+            rgba(255, 120, 200, 0.18),
+            rgba(143, 211, 255, 0.12),
+            transparent 55%
+        );
+    filter: blur(60px);
+    transform-origin: center;
+    z-index: -2;
+    transition: transform 0.1s ease-out;
+}
+
+          @keyframes starsMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(-500px); }
+        }
+
+         h1 {
+        font-size: 3em;
+        margin-bottom: 25px;
+        text-align: center;
+        color: #8fd3ff;
+        text-shadow:
+            0 0 8px rgba(143, 211, 255, 0.8),
+            0 0 18px rgba(79, 172, 254, 0.6);
+        letter-spacing: 2px;
+        }
+        p {
+        font-size: 1.15em;
+        width: 80%;
+        max-width: 800px;
+        margin: 10px 0;
+        color: #d7e3ff;
+        text-decoration: none;
+        background: linear-gradient(
+            90deg,
+            rgba(79, 172, 254, 0.08),
+            rgba(143, 211, 255, 0.05)
+        );
+        padding: 12px 16px;
+        border-radius: 14px;
+        box-shadow: 0 0 20px rgba(79, 172, 254, 0.15);
+        backdrop-filter: blur(4px);
+    }
+
+    p:hover {
+        box-shadow: 0 0 30px rgba(143, 211, 255, 0.4);
+        transform: translateY(-2px);
+        transition: 0.3s ease;
+    }
+.video-link {
+    margin-top: 35px;
+    text-decoration: none;
+}
+
+.video-preview {
+    position: relative;
+    width: 560px;
+    max-width: 90vw;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 0 35px rgba(143, 211, 255, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-preview img {
+    width: 100%;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    color: white;
+    background: rgba(0, 0, 0, 0.35);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.video-preview:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 50px rgba(143, 211, 255, 0.7);
+}
+
+.video-preview:hover .play-button {
+    background: rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+} 
+#discordBtn, #youtubeBtn, #tiktokBtn  { 
+    position: fixed;
+    right: 20px;
+    width: 150px; 
+    height: 45px; 
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+#discordBtn {
+    top: 20px;
+    background: linear-gradient(135deg, #7289da, #99aab5);
+    box-shadow: 0 0 15px rgba(114, 137, 218, 0.7);
+}
+
+#youtubeBtn {
+    top: 70px;
+    background: linear-gradient(135deg, #FF0000, #FF5555);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+#tiktokBtn {
+    top: 120px;
+    background: linear-gradient(135deg, #69C9D0, #EE1D52);
+    box-shadow: 0 0 20px rgba(238, 29, 82, 0.7);
+}
+
+#discordBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(114, 137, 218, 0.9);
+}
+#youtubeBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.9);
+}
+#tiktokBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(238, 29, 82, 0.9);
+}
+ .videos-wrapper {
+    display: flex;
+    flex-direction: row;      
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+    width: 100%;              
+}
+@media (max-width: 1200px) {
+    .videos-wrapper {
+        flex-direction: column;
+    }
+}
+ #secretBtn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(circle, #4cff4c, #1faa1f);
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(76, 255, 76, 0.8);
+    z-index: 2000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#secretBtn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(76, 255, 76, 1);
+}
+
+/* Фон модального вікна */
+#secretModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+/* Контент */
+.modal-content {
+    background: linear-gradient(135deg, #1b2735, #090a0f);
+    padding: 25px 35px;
+    border-radius: 18px;
+    text-align: center;
+    color: #d7e3ff;
+    box-shadow: 0 0 40px rgba(79, 172, 254, 0.6);
+    position: relative;
+    animation: popup 0.3s ease;
+}
+
+/* Хрестик */
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ff6b6b;
+}
+
+#closeModal:hover {
+    color: #ff0000;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+ #thanksBtn {
+    position: fixed;
+    top: 60px; /* під зеленою кнопкою */
+    left: 15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(circle, #c77dff, #7b2cbf);
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(199, 125, 255, 0.9);
+    z-index: 2000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#thanksBtn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 22px rgba(199, 125, 255, 1);
+}
+
+/* Модальне вікно */
+#thanksModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;  /* горизонтальне вирівнювання */
+    align-items: center;      /* вертикальне вирівнювання */
+    z-index: 3000;
+}
+
+/* Контент модалки */
+#thanksModal .modal-content {
+    background: linear-gradient(135deg, #1b0735, #090a0f);
+    padding: 25px 35px;
+    border-radius: 18px;
+    text-align: center;      /* Текст по центру */
+    color: #d7e3ff;
+    box-shadow: 0 0 40px rgba(123, 44, 191, 0.6);
+    position: relative;
+    animation: popup 0.3s ease;
+}
+
+/* Хрестик */
+#closeThanks {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ff6b6b;
+}
+
+#closeThanks:hover {
+    color: #ff0000;
+}
+
+@keyframes popup {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+ #lessonsBtn {
+    position: fixed;
+    top: 220px; 
+    right: 20px;
+    width: 150px;
+    height: 45px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #FF0000, #CC0000);
+    box-shadow: 0 0 20px rgba(255,0,0,0.7);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#lessonsBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(255,0,0,0.9);
+}
+
+/* Модалка */
+#lessonsModal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 3000;
+}
+
+#lessonsModal .modal-content {
+    width: 90%;
+    max-width: 900px;
+    background: #1b2735;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    color: #d7e3ff;
+    position: relative;
+}
+
+/* Хрестик */
+#closeLessons {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #ff4c4c;
+}
+#closeLessons:hover {
+    color: #ff0000;
+}
+
+.lessons-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Відео-прев’ю */
+.video-preview {
+    position: relative;
+    width: 280px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+.video-preview img {
+    width: 100%;
+    display: block;
+}
+.play-button {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+ #telegramBtn {
+    position: fixed;
+    top: 170px; 
+    right: 20px;
+    width: 150px;
+    height: 45px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #0088cc, #005f99); /* синій градієнт */
+    box-shadow: 0 0 20px rgba(0, 136, 204, 0.7);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#telegramBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(0, 136, 204, 0.9);
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+            <h1>Вивчаємо англійську мову рівня A2-C1</h1>
+            <p>1.Don't remind me - не нагадуй мені про це;</p>
+            <p>2.Generous - щедрий;</p>
+            <p>3.Burn the midnight oil – Працювати до пізна, дуже багато працювати;</p> 
+            <p>4.The ball is in your court - Тепер твій хід;</p>
+            <p>5.Jump on the bandwagon – Приєднатися до популярної або модної ідеї чи тренду;</p>
+            <p>6.To hit the nail on the head – Точно сказати;</p>
+            <p>7.I appreciate it – Я вдячний  за це;</p>
+            <p>8.Acquire – здобувати, отримувати;</p>
+            <p>9.Approach – підхід, метод;</p>
+            <p>10.Contribute – сприяти, робити внесок;</p>
+            <p>11.Considerable – значний, помітний;</p>
+            <p>12.Establish – встановлювати, засновувати;</p>
+            <p>13.Maintain – підтримувати;</p>
+            <p>14.Significant – важливий, значущий;</p>
+            <p>15.Achieve – досягати;</p>
+            <p>16.Achievement – досягнення;</p>
+            <p>17.Influence – вплив;</p>
+            <p>18.Resource – ресурс;</p>
+            <p>19.Solution – рішення;</p>
+            <p>20.Responsibility – відповідальність;</p>
+            <p>21.Knowledge – знання;</p>
+            <p>22.Decision – рішення;</p>
+            <p>23.Evidence – доказ;</p>
+            <p>24.Effort – зусилля;</p>
+            <p>25.Failure – невдача;</p>
+            <p>26.Threat – загроза;</p>
+            <p>27.Benefit – користь;</p>
+            <p>28.Awareness – усвідомлення;</p>
+            <p>29.Confidence – впевненість;</p>
+            <p>30.Equality – рівність;</p>
+            <p>31.Make up your mind – Прийняти рішення;</p>
+            <p>32.Get used to – Звикнути до чогось;</p>
+            <p>33.As far as I know – Наскільки я знаю;</p>
+            <p>34.At the end of the day – Зрештою, в кінцевому підсумку;</p>
+            <p>35.Take part in – Брати участь у чомусь;</p>
+            <p>36.Look forward to – З нетерпінням чекати;</p>
+            <p>37.Come up with – Придумати ідею;</p>
+            <p>38.In a hurry – Поспіхом;</p>
+            <p>39.Pay attention to – Звертати увагу на;</p>
+            <p>40.Take care of – Піклуватися про;</p>
+            <p>41.Run out of – Закінчитися (про ресурси);</p>
+            <p>42.Find out – Дізнатися;</p>
+            <p>43.Get along with – Добре ладнати з кимось;</p>
+            <p>44.Make sense – Мати сенс;</p>
+            <p>45.Depend on – Залежати від;</p>
+            <p>46.By the way – До речі;</p>
+            <p>47.Be in charge of – Бути відповідальним за;</p>
+            <p>48.Have something in common – Мати щось спільне;</p>
+            <p>49.Take advantage of – Скористатися (можливістю);</p>
+            <p>50.In my opinion – На мою думку;</p>
+            <p>51.Keep in mind – Мати на увазі;</p>
+<p>52.On purpose – Навмисно;</p>
+<p>53.By accident – Випадково;</p>
+<p>54.From time to time – Час від часу;</p>
+<p>55.As soon as possible – Якомога швидше;</p>
+<p>56.In general – Загалом;</p>
+<p>57.No matter what – Незалежно від обставин;</p>
+<p>58.Take responsibility – Брати відповідальність;</p>
+<p>59.Face a problem – Зіткнутися з проблемою;</p>
+<p>60.Make progress – Досягати прогресу;</p>
+
+<p>61.Catch up with – Наздогнати (у розвитку, справах);</p>
+<p>62.Give up – Здатися;</p>
+<p>63.Figure out – Зрозуміти, розібратися;</p>
+<p>64.Look after – Доглядати за;</p>
+<p>65.End up – У результаті опинитися;</p>
+<p>66.Take a break – Зробити перерву;</p>
+<p>67.Get rid of – Позбутися;</p>
+<p>68.Come across – Натрапити випадково;</p>
+<p>69.Go for it – Сміливо братися;</p>
+<p>70.Make an effort – Докладати зусиль;</p>
+
+<p>71.Pay off – Окупитися, дати результат;</p>
+<p>72.Stick to – Дотримуватися (плану, правил);</p>
+<p>73.Set a goal – Поставити мету;</p>
+<p>74.Take into account – Брати до уваги;</p>
+<p>75.Get involved in – Бути залученим до;</p>
+<p>76.Be aware of – Усвідомлювати;</p>
+<p>77.Feel like – Мати бажання;</p>
+<p>78.In the long run – У довгостроковій перспективі;</p>
+<p>79.Make a difference – Мати значення;</p>
+<p>80.Come to a decision – Прийти до рішення;</p>
+
+<p>81.Handle a situation – Справлятися з ситуацією;</p>
+<p>82.Take a risk – Ризикнути;</p>
+<p>83.Be proud of – Пишатися;</p>
+<p>84.Get permission – Отримати дозвіл;</p>
+<p>85.Follow the rules – Дотримуватися правил;</p>
+<p>86.Miss an opportunity – Втратити можливість;</p>
+<p>87.Reach an agreement – Досягти згоди;</p>
+<p>88.Make a mistake – Зробити помилку;</p>
+<p>89.Gain experience – Набути досвіду;</p>
+<p>90.Stay focused – Залишатися зосередженим;</p>
+
+<p>91.Deal with – Мати справу з;</p>
+<p>92.Take control of – Взяти контроль над;</p>
+<p>93.Rely on – Покладатися на;</p>
+<p>94.Make a choice – Зробити вибір;</p>
+<p>95.Get feedback – Отримати зворотний зв’язок;</p>
+<p>96.Be confident about – Бути впевненим у;</p>
+<p>97.Overcome difficulties – Подолати труднощі;</p>
+<p>98.Stay positive – Залишатися позитивним;</p>
+<p>99.Learn from mistakes – Вчитися на помилках;</p>
+<p>100.Achieve success – Досягти успіху;</p>
+<p>101.Take action – Вжити заходів;</p>
+<p>102.Make a plan – Скласти план;</p>
+<p>103.Reach a goal – Досягти мети;</p>
+<p>104.Stay in touch – Підтримувати зв’язок;</p>
+<p>105.Take a chance – Скористатися шансом;</p>
+<p>106.Keep track of – Слідкувати за;</p>
+<p>107.Be responsible for – Бути відповідальним за;</p>
+<p>108.Get used to something – Звикнути до чогось;</p>
+<p>109.Pay attention – Звертати увагу;</p>
+<p>110.Take your time – Не поспішати;</p>
+
+<p>111.Make a decision – Прийняти рішення;</p>
+<p>112.Face the truth – Дивитися правді в очі;</p>
+<p>113.Get prepared – Підготуватися;</p>
+<p>114.Stay calm – Зберігати спокій;</p>
+<p>115.Bring up a topic – Порушити тему;</p>
+<p>116.Look for a solution – Шукати рішення;</p>
+<p>117.Avoid a problem – Уникати проблеми;</p>
+<p>118.Get motivated – Отримати мотивацію;</p>
+<p>119.Be satisfied with – Бути задоволеним;</p>
+<p>120.Lose patience – Втратити терпіння;</p>
+
+<p>121.Make an excuse – Вигадати виправдання;</p>
+<p>122.Tell the truth – Сказати правду;</p>
+<p>123.Keep a promise – Дотриматися обіцянки;</p>
+<p>124.Take notes – Робити нотатки;</p>
+<p>125.Get permission from – Отримати дозвіл від;</p>
+<p>126.Make a suggestion – Зробити пропозицію;</p>
+<p>127.Show interest in – Проявляти інтерес до;</p>
+<p>128.Get stressed out – Перенапружитися;</p>
+<p>129.Take responsibility for – Взяти відповідальність за;</p>
+<p>130.Stay organized – Бути організованим;</p>
+
+<p>131.Follow advice – Дотримуватися поради;</p>
+<p>132.Set priorities – Визначити пріоритети;</p>
+<p>133.Handle pressure – Справлятися з тиском;</p>
+<p>134.Take a step back – Зробити крок назад;</p>
+<p>135.Get support – Отримати підтримку;</p>
+<p>136.Make an improvement – Зробити покращення;</p>
+<p>137.Be involved in – Бути залученим до;</p>
+<p>138.Find a balance – Знайти баланс;</p>
+<p>139.Stay motivated – Залишатися мотивованим;</p>
+<p>140.Accept responsibility – Прийняти відповідальність;</p>
+
+<p>141.Make a change – Зробити зміни;</p>
+<p>142.Face a challenge – Зіткнутися з викликом;</p>
+<p>143.Build confidence – Побудувати впевненість;</p>
+<p>144.Take initiative – Проявити ініціативу;</p>
+<p>145.Get approval – Отримати схвалення;</p>
+<p>146.Reach a conclusion – Дійти висновку;</p>
+<p>147.Make an impact – Справити вплив;</p>
+<p>148.Stay consistent – Бути послідовним;</p>
+<p>149.Take feedback seriously – Серйозно ставитися до відгуків;</p>
+<p>150.Learn a lesson – Засвоїти урок;</p>
+
+<p>151.Be open to ideas – Бути відкритим до ідей;</p>
+<p>152.Manage time effectively – Ефективно керувати часом;</p>
+<p>153.Handle responsibilities – Справлятися з обов’язками;</p>
+<p>154.Stay on track – Не збиватися з курсу;</p>
+<p>155.Make a commitment – Взяти зобов’язання;</p>
+<p>156.Face consequences – Зіткнутися з наслідками;</p>
+<p>157.Keep expectations realistic – Мати реалістичні очікування;</p>
+<p>158.Develop skills – Розвивати навички;</p>
+<p>159.Get recognition – Отримати визнання;</p>
+<p>160.Stay patient – Залишатися терплячим;</p>
+
+<p>161.Make a difference in life – Змінювати життя;</p>
+<p>162.Set clear goals – Ставити чіткі цілі;</p>
+<p>163.Take things seriously – Сприймати серйозно;</p>
+<p>164.Handle criticism – Справлятися з критикою;</p>
+<p>165.Get better results – Отримувати кращі результати;</p>
+<p>166.Build good habits – Формувати корисні звички;</p>
+<p>167.Be willing to learn – Бути готовим вчитися;</p>
+<p>168.Stay confident – Залишатися впевненим;</p>
+<p>169.Make a strong impression – Справити сильне враження;</p>
+<p>170.Face reality – Дивитися реальності в очі;</p>
+
+<p>171.Take responsibility seriously – Серйозно ставитися до відповідальності;</p>
+<p>172.Be proud of achievements – Пишатися досягненнями;</p>
+<p>173.Handle mistakes wisely – Мудро ставитися до помилок;</p>
+<p>174.Make progress steadily – Поступово прогресувати;</p>
+<p>175.Stay committed – Залишатися відданим;</p>
+<p>176.Learn through experience – Вчитися через досвід;</p>
+<p>177.Face difficulties bravely – Сміливо долати труднощі;</p>
+<p>178.Build a strong mindset – Формувати сильне мислення;</p>
+<p>179.Take responsibility fully – Повністю брати відповідальність;</p>
+<p>180.Stay determined – Залишатися рішучим;</p>
+
+<p>181.Make wise decisions – Приймати мудрі рішення;</p>
+<p>182.Face setbacks – Стикатися з невдачами;</p>
+<p>183.Be focused on goals – Бути зосередженим на цілях;</p>
+<p>184.Handle challenges effectively – Ефективно долати виклики;</p>
+<p>185.Stay resilient – Бути стійким;</p>
+<p>186.Make the right choice – Зробити правильний вибір;</p>
+<p>187.Learn continuously – Вчитися постійно;</p>
+<p>188.Face uncertainty – Зіткнутися з невизначеністю;</p>
+<p>189.Build self-discipline – Розвивати самодисципліну;</p>
+<p>190.Stay optimistic – Залишатися оптимістичним;</p>
+
+<p>191.Take control of life – Взяти контроль над життям;</p>
+<p>192.Be accountable for actions – Нести відповідальність за дії;</p>
+<p>193.Face fears – Долати страхи;</p>
+<p>194.Make long-term plans – Планувати на довгий термін;</p>
+<p>195.Stay committed to goals – Бути відданим цілям;</p>
+<p>196.Build personal growth – Розвивати особистий ріст;</p>
+<p>197.Handle stress effectively – Ефективно боротися зі стресом;</p>
+<p>198.Face obstacles – Долати перешкоди;</p>
+<p>199.Learn from experience – Вчитися з досвіду;</p>
+<p>200.Stay motivated to improve – Бути мотивованим до розвитку;</p>
+<p>201.Take something for granted – Сприймати як належне;</p>
+<p>202.Draw a conclusion – Зробити висновок;</p>
+<p>203.Raise an issue – Порушити проблему;</p>
+<p>204.Weigh the pros and cons – Зважити всі за і проти;</p>
+<p>205.Play a crucial role – Відігравати ключову роль;</p>
+<p>206.Bear in mind – Мати на увазі;</p>
+<p>207.Reach a consensus – Досягти спільної згоди;</p>
+<p>208.Make an assumption – Робити припущення;</p>
+<p>209.From my perspective – З моєї точки зору;</p>
+<p>210.Address a problem – Вирішувати проблему;</p>
+
+<p>211.Take responsibility for one’s actions – Нести відповідальність за свої дії;</p>
+<p>212.Provide insight into – Давати глибоке розуміння;</p>
+<p>213.Face harsh reality – Зіткнутися з жорсткою реальністю;</p>
+<p>214.Bring about change – Спричинити зміни;</p>
+<p>215.Have a significant impact on – Мати значний вплив на;</p>
+<p>216.Raise awareness – Підвищувати обізнаність;</p>
+<p>217.Express concern about – Висловлювати занепокоєння щодо;</p>
+<p>218.Cope with pressure – Справлятися з тиском;</p>
+<p>219.Offer a reasonable explanation – Давати логічне пояснення;</p>
+<p>220.Be subject to change – Підлягати змінам;</p>
+
+<p>221.Take a long-term approach – Дотримуватися довгострокового підходу;</p>
+<p>222.Be reluctant to – Неохоче щось робити;</p>
+<p>223.Gain a deeper understanding – Отримати глибше розуміння;</p>
+<p>224.Challenge conventional thinking – Кидати виклик стандартному мисленню;</p>
+<p>225.Make a valid point – Навести слушний аргумент;</p>
+<p>226.Reach one’s full potential – Реалізувати повний потенціал;</p>
+<p>227.Take into consideration – Враховувати;</p>
+<p>228.Provide evidence to support – Надавати докази на підтвердження;</p>
+<p>229.Adapt to changing circumstances – Адаптуватися до змін;</p>
+<p>230.Have mixed feelings – Мати суперечливі почуття;</p>
+
+<p>231.Take a critical look at – Критично оцінити;</p>
+<p>232.Distinguish between – Розрізняти;</p>
+<p>233.Draw attention to – Привертати увагу до;</p>
+<p>234.Make a compelling argument – Навести переконливий аргумент;</p>
+<p>235.Be open to criticism – Бути відкритим до критики;</p>
+<p>236.Take responsibility seriously – Серйозно ставитися до відповідальності;</p>
+<p>237.Handle complex situations – Справлятися зі складними ситуаціями;</p>
+<p>238.Make an informed decision – Приймати обґрунтоване рішення;</p>
+<p>239.Go beyond expectations – Перевершувати очікування;</p>
+<p>240.Face ethical dilemmas – Стикатися з етичними дилемами;</p>
+
+<p>241.Exercise caution – Дотримуватися обережності;</p>
+<p>242.Have a broad perspective – Мати широкий погляд;</p>
+<p>243.Challenge one’s assumptions – Переосмислювати власні припущення;</p>
+<p>244.Make a conscious effort – Докладати свідомих зусиль;</p>
+<p>245.Address underlying issues – Вирішувати глибинні проблеми;</p>
+<p>246.Take full accountability – Нести повну відповідальність;</p>
+<p>247.Prioritize long-term benefits – Надавати перевагу довгостроковим вигодам;</p>
+<p>248.Handle conflicting interests – Вирішувати конфлікт інтересів;</p>
+<p>249.Reach a turning point – Дійти переломного моменту;</p>
+<p>250.Gain valuable insight – Отримати цінне розуміння;</p>
+
+<p>251.Take a balanced view – Дотримуватися збалансованої позиції;</p>
+<p>252.Be mindful of consequences – Усвідомлювати наслідки;</p>
+<p>253.Make strategic decisions – Приймати стратегічні рішення;</p>
+<p>254.Face uncertainty with confidence – Впевнено зустрічати невизначеність;</p>
+<p>255.Demonstrate strong leadership – Демонструвати сильне лідерство;</p>
+<p>256.Handle responsibility effectively – Ефективно нести відповідальність;</p>
+<p>257.Challenge existing norms – Кидати виклик існуючим нормам;</p>
+<p>258.Make well-informed judgments – Робити добре обґрунтовані висновки;</p>
+<p>259.Adapt one’s approach – Коригувати свій підхід;</p>
+<p>260.Achieve sustainable growth – Досягати сталого розвитку;</p>
+
+<p>261.Take initiative in problem-solving – Проявляти ініціативу у вирішенні проблем;</p>
+<p>262.Demonstrate critical thinking – Демонструвати критичне мислення;</p>
+<p>263.Navigate complex challenges – Орієнтуватися у складних викликах;</p>
+<p>264.Build long-term strategies – Будувати довгострокові стратегії;</p>
+<p>265.Maintain professional integrity – Зберігати професійну цілісність;</p>
+<p>266.Make evidence-based decisions – Приймати рішення на основі доказів;</p>
+<p>267.Address societal issues – Вирішувати суспільні проблеми;</p>
+<p>268.Balance competing priorities – Балансувати між пріоритетами;</p>
+<p>269.Drive meaningful change – Запускати значущі зміни;</p>
+<p>270.Handle pressure gracefully – Гідно справлятися з тиском;</p>
+
+<p>271.Demonstrate resilience – Демонструвати стійкість;</p>
+<p>272.Make sound judgments – Робити виважені висновки;</p>
+<p>273.Take ownership of outcomes – Брати відповідальність за результат;</p>
+<p>274.Pursue continuous improvement – Прагнути постійного розвитку;</p>
+<p>275.Address complex challenges – Вирішувати складні виклики;</p>
+<p>276.Navigate uncertainty effectively – Ефективно діяти в умовах невизначеності;</p>
+<p>277.Make thoughtful decisions – Приймати продумані рішення;</p>
+<p>278.Demonstrate accountability – Демонструвати відповідальність;</p>
+<p>279.Challenge one’s limitations – Долати власні обмеження;</p>
+<p>280.Strive for excellence – Прагнути досконалості;</p>
+
+<p>281.Take a proactive stance – Займати проактивну позицію;</p>
+<p>282.Maintain a high standard – Підтримувати високий рівень;</p>
+<p>283.Address matters objectively – Розглядати питання об’єктивно;</p>
+<p>284.Build credibility over time – Формувати довіру з часом;</p>
+<p>285.Make well-reasoned arguments – Наводити добре обґрунтовані аргументи;</p>
+<p>286.Handle ambiguity confidently – Впевнено працювати з невизначеністю;</p>
+<p>287.Prioritize ethical considerations – Ставити етику на перше місце;</p>
+<p>288.Navigate professional challenges – Орієнтуватися у професійних викликах;</p>
+<p>289.Make a lasting impact – Залишати тривалий вплив;</p>
+<p>290.Demonstrate advanced proficiency – Демонструвати високий рівень володіння;</p>
+
+<p>291.Take a principled approach – Дотримуватися принципового підходу;</p>
+<p>292.Handle sensitive matters – Працювати з делікатними питаннями;</p>
+<p>293.Make strategic adjustments – Вносити стратегічні корективи;</p>
+<p>294.Demonstrate sound judgment – Демонструвати здоровий глузд;</p>
+<p>295.Pursue long-term objectives – Прагнути довгострокових цілей;</p>
+<p>296.Navigate complex environments – Орієнтуватися у складних середовищах;</p>
+<p>297.Take responsibility at scale – Нести відповідальність на високому рівні;</p>
+<p>298.Drive sustainable outcomes – Досягати сталих результатів;</p>
+<p>299.Maintain strategic focus – Зберігати стратегічну зосередженість;</p>
+<p>300.Demonstrate professional maturity – Демонструвати професійну зрілість;</p>
+
+ <button id="secretBtn" title="Secret info">🟢</button>
+
+<!-- Модальне вікно -->
+<div id="secretModal">
+  <div class="modal-content">
+    <span id="closeModal">✖</span>
+    <p>
+      🎮 <strong>Автор грає у War Thunder</strong><br><br>
+      Nickname: <strong>Пожилой Пивозавр</strong>
+    </p>
+  </div>
+</div>
+<button id="thanksBtn" title="Thanks">🟣</button>
+
+<div id="thanksModal">
+  <div class="modal-content">
+    <span id="closeThanks">✖</span>
+    <p>💜 Дякую за відвідування мого сайту!</p>
+  </div>
+</div>
+
+
+
+  <div class="videos-wrapper">
+
+    <a class="video-link"
+       href="https://www.youtube.com/watch?v=BX0lKSa_PTk"
+       target="_blank">
+        <div class="video-preview">
+            <img src="https://img.youtube.com/vi/BX0lKSa_PTk/maxresdefault.jpg">
+            <div class="play-button">▶</div>
+        </div>
+    </a>
+
+    <a class="video-link"
+       href="https://www.youtube.com/watch?v=8F2s8ivKXNY"
+       target="_blank">
+        <div class="video-preview">
+            <img src="https://img.youtube.com/vi/8F2s8ivKXNY/maxresdefault.jpg">
+            <div class="play-button">▶</div>
+        </div>
+    </a>
+
+</div>
+ <button id="lessonsBtn">📚 English Lessons</button>
+
+<!-- Модальне вікно для уроків -->
+<div id="lessonsModal" class="modal">
+  <div class="modal-content">
+    <span id="closeLessons">✖</span>
+    <h3>English Lessons (30 min each)</h3>
+    <div class="lessons-videos">
+      <!-- Просто посилання на відео з прев’ю -->
+      <a href="https://www.youtube.com/watch?v=5MgBikgcWnY" target="_blank" class="video-link">
+        <div class="video-preview">
+          <img src="https://img.youtube.com/vi/5MgBikgcWnY/maxresdefault.jpg">
+          <div class="play-button">▶</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=QwZT7T-TXT0" target="_blank" class="video-link">
+        <div class="video-preview">
+          <img src="https://img.youtube.com/vi/QwZT7T-TXT0/maxresdefault.jpg">
+          <div class="play-button">▶</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=Iv4F-YV0TxY" target="_blank" class="video-link">
+        <div class="video-preview">
+          <img src="https://img.youtube.com/vi/Iv4F-YV0TxY/maxresdefault.jpg">
+          <div class="play-button">▶</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+ <button id="discordBtn">💬 Discord</button>
+ <button id="youtubeBtn">▶ YouTube</button>
+ <button id="tiktokBtn">🎵 TikTok</button>
+ <button id="telegramBtn">✈ Telegram</button>
+ 
+ <script>
+    const discordBtn = document.getElementById('discordBtn');
+
+    discordBtn.addEventListener('click', () => {
+        const discordLink = "https://discord.gg/1370734113266335755"; 
+        window.open(discordLink, "_blank", "width=500,height=700");
+    });
+</script>
+<script>
+    const youtubeBtn = document.getElementById('youtubeBtn');
+
+    youtubeBtn.addEventListener('click', () => {
+        const youtubeLink = "https://www.youtube.com/@Maxwithegun"; 
+        window.open(youtubeLink, "_blank", "width=800,height=600");
+    });
+</script>
+ <script>
+    const tiktokBtn = document.getElementById('tiktokBtn');
+
+    tiktokBtn.addEventListener('click', () => {
+        const tiktokLink = "https://www.tiktok.com/@__exampl3__"; 
+        window.open(tiktokLink, "_blank", "width=800,height=600");
+    });
+</script>
+ <script>
+const secretBtn = document.getElementById('secretBtn');
+const secretModal = document.getElementById('secretModal');
+const closeModal = document.getElementById('closeModal');
+
+secretBtn.addEventListener('click', () => {
+    secretModal.style.display = 'flex';
+});
+
+closeModal.addEventListener('click', () => {
+    secretModal.style.display = 'none';
+});
+
+
+secretModal.addEventListener('click', (e) => {
+    if (e.target === secretModal) {
+        secretModal.style.display = 'none';
+    }
+});
+</script>
+<script>
+    const galaxy = document.body;
+
+    document.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth - 0.5; // -0.5 → 0.5
+        const y = e.clientY / window.innerHeight - 0.5;
+
+        document.body.style.setProperty('--galaxy-rotate-x', `${y * 10}deg`);
+        document.body.style.setProperty('--galaxy-rotate-y', `${x * 20}deg`);
+    });
+</script>
+<script>
+const thanksBtn = document.getElementById('thanksBtn');
+const thanksModal = document.getElementById('thanksModal');
+const closeThanks = document.getElementById('closeThanks');
+
+thanksBtn.addEventListener('click', () => {
+    thanksModal.style.display = 'flex';
+});
+
+closeThanks.addEventListener('click', () => {
+    thanksModal.style.display = 'none';
+});
+
+thanksModal.addEventListener('click', (e) => {
+    if (e.target === thanksModal) {
+        thanksModal.style.display = 'none';
+    }
+});
+</script>
+<script>
+const lessonsBtn = document.getElementById('lessonsBtn');
+const lessonsModal = document.getElementById('lessonsModal');
+const closeLessons = document.getElementById('closeLessons');
+
+lessonsBtn.addEventListener('click', () => {
+    lessonsModal.style.display = 'flex';
+});
+
+closeLessons.addEventListener('click', () => {
+    lessonsModal.style.display = 'none';
+});
+
+lessonsModal.addEventListener('click', (e) => {
+    if(e.target === lessonsModal) lessonsModal.style.display = 'none';
+});
+</script>
+ <script>
+const telegramBtn = document.getElementById('telegramBtn');
+
+telegramBtn.addEventListener('click', () => {
+    const telegramLink = "https://t.me/englaxy"; 
+    window.open(telegramLink, "_blank", "width=500,height=700");
+});
+</script>
+
+
+
+</body>
+</html>
+
+ 
