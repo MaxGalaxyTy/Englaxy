@@ -455,6 +455,87 @@ body::after {
     box-shadow: 0 0 35px rgba(0, 136, 204, 0.9);
 }
 
+}
+ #slangBtn {
+    position: fixed;
+    right: 20px;
+    top: 275px; /* нижче English lessons */
+    width: 150px;
+    height: 45px;
+    font-size: 1.05em;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(135deg, #ff5fa2, #ff8acb);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+    z-index: 1000;
+}
+
+#slangBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px rgba(255, 105, 180, 1);
+}
+
+/* Модальне вікно */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 70%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 18px;
+    position: relative;
+}
+
+.modal-content.pink {
+    background: linear-gradient(135deg, #2b0f1f, #1a0b14);
+    color: #ffd6eb;
+    box-shadow: 0 0 40px rgba(255, 105, 180, 0.9);
+}
+
+.modal-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slang-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.slang-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 182, 193, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 22px;
+    color: #ff6fae;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff9fcf;
+}
+
+
+
 
 
 
@@ -785,6 +866,7 @@ body::after {
 <p>298.Drive sustainable outcomes – Досягати сталих результатів;</p>
 <p>299.Maintain strategic focus – Зберігати стратегічну зосередженість;</p>
 <p>300.Demonstrate professional maturity – Демонструвати професійну зрілість;</p>
+<p>301.Take full accountability – Нести повну відповідальність;</p> <p>302.Demonstrate critical thinking – Демонструвати критичне мислення;</p> <p>303.Navigate complex situations – Орієнтуватися у складних ситуаціях;</p> <p>304.Make an informed decision – Приймати обґрунтоване рішення;</p> <p>305.Address underlying issues – Вирішувати глибинні проблеми;</p> <p>306.Challenge existing beliefs – Кидати виклик усталеним переконанням;</p> <p>307.Adapt one’s strategy – Адаптувати власну стратегію;</p> <p>308.Handle pressure effectively – Ефективно справлятися з тиском;</p> <p>309.Exercise sound judgment – Проявляти здоровий глузд;</p> <p>310.Drive meaningful change – Спричиняти значущі зміни;</p> <p>311.Maintain a balanced perspective – Зберігати збалансований погляд;</p> <p>312.Go beyond expectations – Перевершувати очікування;</p> <p>313.Build long-term resilience – Формувати довгострокову стійкість;</p> <p>314.Weigh the consequences – Зважувати наслідки;</p> <p>315.Take a principled stance – Дотримуватися принципової позиції;</p> <p>316.Resolve conflicts diplomatically – Вирішувати конфлікти дипломатично;</p> <p>317.Demonstrate leadership skills – Демонструвати лідерські якості;</p> <p>318.Foster mutual understanding – Сприяти взаєморозумінню;</p> <p>319.Manage competing priorities – Керувати конкуруючими пріоритетами;</p> <p>320.Pursue excellence consistently – Постійно прагнути досконалості;</p> <p>321.Handle ambiguity confidently – Впевнено працювати з невизначеністю;</p> <p>322.Make strategic adjustments – Вносити стратегічні корективи;</p> <p>323.Build professional credibility – Формувати професійну довіру;</p> <p>324.Address concerns proactively – Проактивно вирішувати занепокоєння;</p> <p>325.Exert significant influence – Мати значний вплив;</p> <p>326.Demonstrate emotional intelligence – Демонструвати емоційний інтелект;</p> <p>327.Take ownership of outcomes – Брати відповідальність за результати;</p> <p>328.Navigate ethical dilemmas – Орієнтуватися в етичних дилемах;</p> <p>329.Ensure long-term sustainability – Забезпечувати довгострокову сталість;</p> <p>330.Make data-driven decisions – Приймати рішення на основі даних;</p> <p>331.Challenge conventional wisdom – Кидати виклик загальноприйнятим поглядам;</p> <p>332.Drive continuous improvement – Забезпечувати безперервний розвиток;</p> <p>333.Handle criticism constructively – Конструктивно сприймати критику;</p> <p>334.Maintain strategic focus – Зберігати стратегічну зосередженість;</p> <p>335.Take a holistic approach – Застосовувати комплексний підхід;</p> <p>336.Demonstrate professional integrity – Демонструвати професійну цілісність;</p> <p>337.Prioritize long-term benefits – Надавати пріоритет довгостроковим вигодам;</p> <p>338.Navigate uncertainty effectively – Ефективно діяти в умовах невизначеності;</p> <p>339.Make well-informed judgments – Робити обґрунтовані висновки;</p> <p>340.Handle responsibility at scale – Нести відповідальність на високому рівні;</p> <p>341.Build sustainable strategies – Формувати сталі стратегії;</p> <p>342.Address complex challenges – Вирішувати складні виклики;</p> <p>343.Demonstrate resilience under pressure – Проявляти стійкість під тиском;</p> <p>344.Take decisive action – Діяти рішуче;</p> <p>345.Maintain ethical standards – Дотримуватися етичних стандартів;</p> <p>346.Manage high-stakes situations – Керувати критично важливими ситуаціями;</p> <p>347.Adapt to rapidly changing conditions – Адаптуватися до швидких змін;</p> <p>348.Build long-term value – Створювати довгострокову цінність;</p> <p>349.Exercise strategic foresight – Проявляти стратегічне передбачення;</p> <p>350.Demonstrate advanced proficiency – Демонструвати високий рівень володіння;</p> <p>351.Take a proactive stance – Займати проактивну позицію;</p> <p>352.Handle sensitive matters – Працювати з делікатними питаннями;</p> <p>353.Make principled decisions – Приймати принципові рішення;</p> <p>354.Balance competing interests – Балансувати конкуруючі інтереси;</p> <p>355.Navigate professional challenges – Орієнтуватися у професійних викликах;</p> <p>356.Drive organizational change – Запускати організаційні зміни;</p> <p>357.Demonstrate sound leadership – Демонструвати зріле лідерство;</p> <p>358.Manage complexity effectively – Ефективно керувати складністю;</p> <p>359.Build trust over time – Формувати довіру з часом;</p> <p>360.Deliver consistent results – Забезпечувати стабільні результати;</p> <p>361.Address risks strategically – Стратегічно керувати ризиками;</p> <p>362.Maintain long-term vision – Зберігати довгострокове бачення;</p> <p>363.Make evidence-based judgments – Робити висновки на основі доказів;</p> <p>364.Handle ambiguity with confidence – Впевнено працювати з невизначеністю;</p> <p>365.Align actions with values – Узгоджувати дії з цінностями;</p> <p>366.Pursue sustainable success – Прагнути сталого успіху;</p> <p>367.Demonstrate accountability – Демонструвати відповідальність;</p> <p>368.Manage expectations effectively – Ефективно керувати очікуваннями;</p> <p>369.Address systemic issues – Вирішувати системні проблеми;</p> <p>370.Drive impactful outcomes – Досягати відчутних результатів;</p> <p>371.Exercise independent judgment – Проявляти незалежне судження;</p> <p>372.Build strategic partnerships – Будувати стратегічні партнерства;</p> <p>373.Handle pressure gracefully – Гідно справлятися з тиском;</p> <p>374.Maintain operational excellence – Підтримувати операційну досконалість;</p> <p>375.Navigate change proactively – Проактивно діяти під час змін;</p> <p>376.Make nuanced decisions – Приймати виважені рішення;</p> <p>377.Address competing demands – Враховувати суперечливі вимоги;</p> <p>378.Demonstrate cognitive flexibility – Демонструвати гнучкість мислення;</p> <p>379.Build institutional knowledge – Формувати інституційні знання;</p> <p>380.Deliver long-term impact – Забезпечувати довгостроковий вплив;</p> <p>381.Manage complex environments – Керувати складними середовищами;</p> <p>382.Prioritize strategic objectives – Визначати стратегічні цілі;</p> <p>383.Handle uncertainty decisively – Рішуче діяти в умовах невизначеності;</p> <p>384.Demonstrate analytical rigor – Демонструвати аналітичну точність;</p> <p>385.Build adaptive capacity – Розвивати здатність до адаптації;</p> <p>386.Address long-term risks – Враховувати довгострокові ризики;</p> <p>387.Maintain decision-making discipline – Дотримуватися дисципліни рішень;</p> <p>388.Navigate institutional constraints – Орієнтуватися в інституційних обмеженнях;</p> <p>389.Drive value creation – Створювати цінність;</p> <p>390.Demonstrate strategic maturity – Демонструвати стратегічну зрілість;</p> <p>391.Manage cross-functional challenges – Керувати міжфункціональними викликами;</p> <p>392.Align stakeholders effectively – Ефективно узгоджувати інтереси сторін;</p> <p>393.Handle high-level responsibility – Нести відповідальність високого рівня;</p> <p>394.Maintain organizational coherence – Підтримувати цілісність організації;</p> <p>395.Navigate competing narratives – Орієнтуватися у суперечливих підходах;</p> <p>396.Demonstrate strategic agility – Демонструвати стратегічну гнучкість;</p> <p>397.Build long-term credibility – Формувати довгострокову репутацію;</p> <p>398.Address transformational challenges – Вирішувати трансформаційні виклики;</p> <p>399.Manage complexity at scale – Керувати масштабною складністю;</p> <p>400.Deliver sustained performance – Забезпечувати стабільну ефективність;</p> <p>401.Exercise executive judgment – Проявляти управлінське судження;</p> <p>402.Maintain strategic alignment – Зберігати стратегічну узгодженість;</p> <p>403.Navigate institutional complexity – Орієнтуватися в інституційній складності;</p> <p>404.Build strategic resilience – Формувати стратегічну стійкість;</p> <p>405.Address long-term implications – Враховувати довгострокові наслідки;</p> <p>406.Manage uncertainty strategically – Стратегічно працювати з невизначеністю;</p> <p>407.Demonstrate decision-making maturity – Демонструвати зрілість рішень;</p> <p>408.Align execution with strategy – Узгоджувати виконання зі стратегією;</p> <p>409.Handle systemic complexity – Керувати системною складністю;</p> <p>410.Deliver strategic outcomes – Досягати стратегічних результатів;</p> <p>411.Navigate organizational change – Орієнтуватися в організаційних змінах;</p> <p>412.Build sustainable advantage – Створювати стійку перевагу;</p> <p>413.Address evolving challenges – Вирішувати змінні виклики;</p> <p>414.Demonstrate advanced judgment – Демонструвати розвинене судження;</p> <p>415.Manage long-term trade-offs – Керувати довгостроковими компромісами;</p> <p>416.Maintain strategic discipline – Дотримуватися стратегічної дисципліни;</p> <p>417.Navigate high-complexity environments – Орієнтуватися в надскладних середовищах;</p> <p>418.Build organizational resilience – Формувати стійкість організації;</p> <p>419.Address structural challenges – Вирішувати структурні проблеми;</p> <p>420.Deliver transformational results – Досягати трансформаційних результатів;</p> <p>421.Exercise strategic leadership – Проявляти стратегічне лідерство;</p> <p>422.Maintain systemic perspective – Зберігати системне бачення;</p> <p>423.Navigate competing priorities effectively – Ефективно балансувати пріоритети;</p> <p>424.Build long-term strategic capacity – Розвивати довгостроковий стратегічний потенціал;</p> <p>425.Address emerging risks – Враховувати нові ризики;</p> <p>426.Demonstrate organizational insight – Демонструвати організаційне розуміння;</p> <p>427.Manage strategic complexity – Керувати стратегічною складністю;</p> <p>428.Align vision with execution – Узгоджувати бачення з реалізацією;</p> <p>429.Handle transformational pressure – Справлятися з трансформаційним тиском;</p> <p>430.Deliver sustained value – Забезпечувати сталу цінність;</p> <p>431.Navigate macro-level challenges – Орієнтуватися у макрорівневих викликах;</p> <p>432.Build adaptive strategies – Формувати адаптивні стратегії;</p> <p>433.Address cross-sector complexity – Вирішувати міжсекторну складність;</p> <p>434.Demonstrate executive resilience – Демонструвати управлінську стійкість;</p> <p>435.Manage long-term uncertainty – Керувати довгостроковою невизначеністю;</p> <p>436.Maintain strategic coherence – Підтримувати стратегічну цілісність;</p> <p>437.Navigate transformational uncertainty – Орієнтуватися в умовах трансформацій;</p> <p>438.Build enduring impact – Створювати тривалий вплив;</p> <p>439.Address institutional risk – Керувати інституційними ризиками;</p> <p>440.Deliver strategic excellence – Досягати стратегічної досконалості;</p> <p>441.Exercise systems thinking – Застосовувати системне мислення;</p> <p>442.Maintain long-term strategic clarity – Зберігати довгострокову стратегічну ясність;</p> <p>443.Navigate large-scale change – Орієнтуватися в масштабних змінах;</p> <p>444.Build strategic foresight – Розвивати стратегічне передбачення;</p> <p>445.Address structural uncertainty – Враховувати структурну невизначеність;</p> <p>446.Demonstrate governance competence – Демонструвати управлінську компетентність;</p> <p>447.Manage strategic risk exposure – Керувати стратегічними ризиками;</p> <p>448.Align institutional objectives – Узгоджувати інституційні цілі;</p> <p>449.Handle systemic pressure – Справлятися з системним тиском;</p> <p>450.Deliver long-term strategic outcomes – Досягати довгострокових стратегічних результатів;</p> <p>451.Navigate global complexity – Орієнтуватися у глобальній складності;</p> <p>452.Build strategic adaptability – Розвивати стратегічну адаптивність;</p> <p>453.Address geopolitical challenges – Враховувати геополітичні виклики;</p> <p>454.Demonstrate institutional leadership – Демонструвати інституційне лідерство;</p> <p>455.Manage large-scale transformation – Керувати масштабними трансформаціями;</p> <p>456.Maintain strategic continuity – Підтримувати стратегічну безперервність;</p> <p>457.Navigate long-term disruption – Орієнтуватися у довгострокових зрушеннях;</p> <p>458.Build enduring strategic value – Створювати тривалу стратегічну цінність;</p> <p>459.Address systemic vulnerabilities – Враховувати системні вразливості;</p> <p>460.Deliver sustainable strategic performance – Забезпечувати сталу стратегічну ефективність;</p> <p>461.Exercise institutional judgment – Проявляти інституційне судження;</p> <p>462.Maintain macro-strategic focus – Зберігати макростратегічну зосередженість;</p> <p>463.Navigate structural transformation – Орієнтуватися у структурних трансформаціях;</p> <p>464.Build long-term institutional capacity – Формувати довгостроковий інституційний потенціал;</p> <p>465.Address systemic constraints – Враховувати системні обмеження;</p> <p>466.Demonstrate policy awareness – Демонструвати політичну обізнаність;</p> <p>467.Manage strategic dependencies – Керувати стратегічними залежностями;</p> <p>468.Align governance with strategy – Узгоджувати управління зі стратегією;</p> <p>469.Handle institutional uncertainty – Справлятися з інституційною невизначеністю;</p> <p>470.Deliver institutional resilience – Забезпечувати інституційну стійкість;</p> <p>471.Navigate cross-border complexity – Орієнтуватися у міждержавній складності;</p> <p>472.Build systemic adaptability – Формувати системну адаптивність;</p> <p>473.Address global systemic risks – Враховувати глобальні системні ризики;</p> <p>474.Demonstrate strategic stewardship – Демонструвати стратегічну відповідальність;</p> <p>475.Manage institutional transformation – Керувати інституційними трансформаціями;</p> <p>476.Maintain long-term policy coherence – Зберігати довгострокову політичну узгодженість;</p> <p>477.Navigate geopolitical uncertainty – Орієнтуватися у геополітичній невизначеності;</p> <p>478.Build resilient institutions – Формувати стійкі інституції;</p> <p>479.Address systemic interdependencies – Враховувати системні взаємозалежності;</p> <p>480.Deliver sustainable institutional outcomes – Забезпечувати сталі інституційні результати;</p> <p>481.Exercise global strategic judgment – Проявляти глобальне стратегічне судження;</p> <p>482.Maintain cross-system alignment – Підтримувати міжсистемну узгодженість;</p> <p>483.Navigate international complexity – Орієнтуватися у міжнародній складності;</p> <p>484.Build long-term global capacity – Формувати довгостроковий глобальний потенціал;</p> <p>485.Address transnational challenges – Вирішувати транснаціональні виклики;</p> <p>486.Demonstrate global leadership – Демонструвати глобальне лідерство;</p> <p>487.Manage systemic global risk – Керувати глобальними системними ризиками;</p> <p>488.Align global strategy with execution – Узгоджувати глобальну стратегію з реалізацією;</p> <p>489.Handle international uncertainty – Справлятися з міжнародною невизначеністю;</p> <p>490.Deliver global strategic resilience – Забезпечувати глобальну стратегічну стійкість;</p> <p>491.Navigate planetary-scale challenges – Орієнтуватися у викликах планетарного масштабу;</p> <p>492.Build sustainable global systems – Формувати сталі глобальні системи;</p> <p>493.Address existential risks – Враховувати екзистенційні ризики;</p> <p>494.Demonstrate long-term global foresight – Демонструвати глобальне довгострокове передбачення;</p> <p>495.Manage systemic planetary change – Керувати системними планетарними змінами;</p> <p>496.Maintain intergenerational responsibility – Дотримуватися міжпоколінної відповідальності;</p> <p>497.Navigate future uncertainty – Орієнтуватися у майбутній невизначеності;</p> <p>498.Build enduring global resilience – Формувати тривалу глобальну стійкість;</p> <p>499.Address long-term planetary outcomes – Враховувати довгострокові планетарні наслідки;</p> <p>500.Deliver sustainable future impact – Забезпечувати сталий вплив на майбутнє;</p>
 
  <button id="secretBtn" title="Secret info">🟢</button>
 
@@ -868,6 +950,30 @@ body::after {
  <button id="youtubeBtn">▶ YouTube</button>
  <button id="tiktokBtn">🎵 TikTok</button>
  <button id="telegramBtn">✈ Telegram</button>
+<button id="slangBtn">⚔️ English Slang</button>
+ <div id="slangModal" class="modal">
+  <div class="modal-content pink">
+    <span class="close" id="closeSlang">✖</span>
+    <h2>🔥 Popular English Slang</h2>
+    <ul class="slang-list">
+      <li>1. Lit – круто, вогонь</li>
+      <li>2. Flex – хизуватися</li>
+      <li>3. No cap – без брехні</li>
+      <li>4. Chill – розслабся</li>
+      <li>5. Vibe – атмосфера</li>
+      <li>6. Ghost someone – ігнорити</li>
+      <li>7. Low-key – трохи / неявно</li>
+      <li>8. High-key – дуже / явно</li>
+      <li>9. Savage – жорстко, безжально</li>
+      <li>10. Flex on – показувати перевагу</li>
+      <li>11. Hit different – відчувається інакше</li>
+      <li>12. Simp – занадто старається заради когось</li>
+      <li>13. W / L – перемога / поразка</li>
+      <li>14. Based – поважаю, крута думка</li>
+      <li>15. GOAT – найкращий усіх часів</li>
+    </ul>
+  </div>
+</div>
  
  <script>
     const discordBtn = document.getElementById('discordBtn');
@@ -968,10 +1074,30 @@ telegramBtn.addEventListener('click', () => {
     window.open(telegramLink, "_blank", "width=500,height=700");
 });
 </script>
+<script>
+const slangBtn = document.getElementById('slangBtn');
+const slangModal = document.getElementById('slangModal');
+const closeSlang = document.getElementById('closeSlang');
+
+slangBtn.onclick = () => {
+    slangModal.style.display = 'flex';
+};
+
+closeSlang.onclick = () => {
+    slangModal.style.display = 'none';
+};
+
+window.onclick = (e) => {
+    if (e.target === slangModal) {
+        slangModal.style.display = 'none';
+    }
+};
+</script>
 
 
 
 </body>
 </html>
+
 
  
